@@ -60,6 +60,16 @@
     </div>
   </nav>
 
+
+
+
+
+
+
+
+
+
+
   <!-- main -->
   <main>
     <!-- hero section -->
@@ -106,6 +116,8 @@
       </div>
     </section>
 
+
+
     <!-- discussion section -->
     <section class="container mx-auto w-11/12 lg:w-10/12 my-12 lg:my-24">
       <div class="flex lg:w-2/5 mx-auto flex-col items-center justify-center space-y-8 lg:my-12">
@@ -123,10 +135,47 @@
         <div id="post-container" class="lg:w-8/12 space-y-5">
           <!-- demo card showing without dynamic value  -->
 
+          <div class="p-6 lg:p-12 flex gap-6 lg:flex-grow flex-col lg:flex-row items-center lg:items-start rounded-3xl">
+            <div class="indicator">
+              <span class="indicator-item badge e${e.isactive? "bg-green-600" : "bg-red-500'}"></span>
+              <div class="avatar">
+                <div class="w-24 rounded-xl">
+                  <img src=${e.image} />
+                </div>
+
+              </div>
+            </div>
+            <div class="space-y-4 w-full">
+              <div class="flex gap-4 opacity-70">
+                <p>#category</p>
+                <p>author.authorname </p>
+              </div>
+              <h3 class="text-2xl font-bold opacity-70">
+                title
+              </h3>
+              <p class="opacity-40">
+                description
+              </p>
+              <hr class="border border-dashed border-gray-300">
+              <div class="flex justify-between font-bold opacity-45">
+                <div>comment count </div>
+                <div>view count</div>
+                <div>posttime min</div>
+                <div class="opacity-100">
+                  <button id="addToList" class="addToList btn btn-circle bg-green-700 btn-sm">
+                    <i class="fa-solid fa-envelope-open text-white"></i>
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
 
 
-          <div class="flex w-full justify-center">
-            <span id="postLoader" class="loading loading-spinner loading-lg lg:mt-24 text-primary hidden"></span>
+
+
+
           </div>
           <!-- dynamic content -->
         </div>
@@ -136,11 +185,21 @@
               <h4 class="font-bold text-xl">Title</h4>
               <p class="opacity-50">
                 <i class="fa-solid fa-check-double text-green-500"></i> Mark
-                as read (<span id="markAsReadCounter">0</span>)
+                as read <span id="markAsReadCounter">0</span>
               </p>
             </div>
             <div class="space-y-4 *:opacity-70" id="markAsReadContainer">
               <!-- dynamic content -->
+               <div class="flex justify-between p-2 lg:p-3 bg-white rounded-2xl items-center gap-3">
+                <div class="lg:w-4/5 w-11/12">
+                  <p>postdata.desciption</p>
+                </div>
+                <div class="lg:w-1/5 w-4/12 flex justify-end">
+                  <p><i class="fa regular fa eye"></i> post data .view count</p>
+
+                </div>
+
+               </div>
 
 
 
@@ -150,7 +209,15 @@
       </div>
     </section>
 
-    <!-- forum section -->
+
+
+
+
+
+
+
+
+    <!-- JOIN forum section -->
     <section class="container mx-auto lg:w-10/12 w-11/12 my-8 lg:my-12">
       <div
         class="lg:p-16 rounded-3xl *:text-white bg-[#12132D] p-6 flex flex-col-reverse lg:flex-row justify-center items-center gap-8">
@@ -181,7 +248,7 @@
         </p>
       </div>
       <div id="latest-post-container" class="flex gap-5 lg:flex-row flex-col items-center justify-evenly">
-        <!-- show latest post in span tag wihtout dynamic value  -->
+        <!-- show latest post in span tag without dynamic value  -->
         <div class="card lg:w-96 pb-5 bg-base-100 shadow-2xl">
           <figure class="lg:px-6 px-4 pt-4 lg:pt-8">
             <img src=${e.cover_image} alt="Shoes" class="rounded-xl" />
@@ -254,7 +321,7 @@
     </div>
   </footer>
   <!-- scripts -->
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
